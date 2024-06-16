@@ -1,0 +1,80 @@
+GET http://localhost:3000/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
+
+###
+
+GET http://localhost:3000/books/1/
+Authorization:  Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
+
+###
+GET http://localhost:3000/authors/7/books/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
+
+###
+
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{    
+    "username": "santhoshp20",
+    "password": "S@NTHOSHNGP!234",
+    "gender":"male",
+    "location":"ERODE"
+}
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{    
+    "username": "santhoshp20",
+    "password": "S@NTHOSHNGP!234"
+
+}
+
+###
+GET http://localhost:3000/profile/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
+
+POST http://localhost:3000/books/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
+
+{
+  "title": "Harry Potter and the Order of the Phoenix",
+  "authorId": 1,
+  "rating": 4.62,
+  "ratingCount": 126559,
+  "reviewCount": 611,
+  "description": "There is a door at the end of a silent corridor.",
+  "pages": 352,
+  "dateOfPublication": "May 1st 2003",
+  "editionLanguage": "English",
+  "price": 850,
+  "onlineStores": "Amazon,Audible,Indigo,Apple Books,Google Play,IndieBound"
+}
+
+###
+PUT http://localhost:3000/books/4 
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
+
+
+{
+  "title": "Harry Potter and the Order of the Phoenix",
+  "authorId": 1,
+  "rating": 4.62,
+  "ratingCount": 10000000000000000,
+  "reviewCount": 611,
+  "description": "There is a door at the end of a silent corridor.",
+  "pages": 352,
+  "dateOfPublication": "May 1st 2003",
+  "editionLanguage": "English",
+  "price": 850,
+  "onlineStores": "Amazon,Audible,Indigo,Apple Books,Google Play,IndieBound"
+}
+
+###
+DELETE http://localhost:3000/books/3 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNhbnRob3NocDIwIiwiaWF0IjoxNzE4NTMwODUxfQ.DnYJCcrOdn2USBrQlzImhqQF2Q6ZmIF1INKKKMPVD94
